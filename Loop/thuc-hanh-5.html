@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Bài 1 -->
-    <h2>JavaScript Loops</h2>
+    <!-- <h2>JavaScript Loops</h2>
     <p id="demo"></p>
     <script>
     let text = "";
@@ -17,16 +17,19 @@
         text += "The number is " + i + "<br>";
     }
     document.getElementById("demo").innerHTML = text;
-    </script>
+    </script> -->
 
     <!-- Bài 2 -->
-    <!-- <script>
-        var num = parseInt(proompt("Enter your number: "));
-        var total = 0;
-        for (i = 1; i <= num; i = i + 1) {
-            total = total + 1;
+        <script>
+            let num = prompt("Enter your number: ");
+            let total = 0;
+            let i = 1;
+            for (; i <= num; i +=1) {
+    // phần thân vòng lặp thực hiện tính tổng
+            }
+            total = total + i;
             alert(total);
-        }
-        </script> -->
+
+        </script>
 </body>
 </html>
