@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>
+        <input type="text" name="chuyen" id="footer" oninput="foottometer()"/>chuyen feet --> meter <input type="text" name="chuyen" value="xuat ra" id="foottomet"/><br/>
+         <br>   
+        <input type="text" name="chuyen" id="meter" oninput="metertofoot()"/>chuyen meter --> feet<input type="text" name="chuyen" value="xuat ra" id="mettofoot"/>
+    </p>
+</form>
+</body>
+</html>
+<script>
+    function foottometer(){
+        foott=document.getElementById("footer").value;
+        meter=0.305*foott;
+        document.getElementById("foottomet").value="meter = "+meter;
+        console.log("meter= "+ meter);
+    }
+    
+    function metertofoot(){
+        meter=document.getElementById("meter").value;
+        foot=3.279*meter;
+        document.getElementById("mettofoot").value="foot = "+foot;
+        console.log("foot= "+ foot);
+    }
+   </script>
