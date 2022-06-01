@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Tính chu vi và diện tích hình tròn</h3>
+    <p>Nhập vào bán kính hình tròn:
+        <input type="number" id="radius" placeholder="circle radius" value="0"/>
+    </p>
+    <button onclick="cal()">Tính</button>
+    <p>Chu vi hình tròn là:
+        <spain id="circumference">0</spain>
+
+    </p>
+    <p>Diện tích của hình tròn là:
+        <span id="acreage">0</span>
+    </p>
+</body>
+<script>
+    function cal(){
+        var r = document.getElementById("radius").value;
+        var circumference = 2*Math.PI*r;
+        document.getElementById("circumference").innerHTML = circumference.toFixed(3);
+
+        var acreage = Math.PI*r*r;
+        document.getElementById("acreage").innerHTML = acreage.toFixed(3);
+    }
+</script>
+</html>

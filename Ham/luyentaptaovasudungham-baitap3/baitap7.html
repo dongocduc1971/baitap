@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="dis"></p> 
+    <p id="dis1"></p>
+    <p id="dis2"></p>
+    <p id="dis3"></p>
+    <p id="dis4"></p>
+    <p id="dis5"></p>
+</body>
+<script>
+    let num_Duong = []
+    for ( let i = 0 ; i < 100 ; i ++) {
+        num_Duong[i] = Math.floor(Math.random() * 100);
+        let zero = num-Duong.indexOf(0)
+        if (num_Duong[i] == 0) {
+            num_Duong.splice(i,i,"101")
+        }
+    }
+    document.getElementById("dis").innerHTML = num_Duong
+    function so_nguyen_duong() {
+        let num1 = num_Duong.slice(0,3)
+        document.getElementById("dis1").innerHTML = "3 số nguyên dương nhỏ nhất là: " + num1
+        let a = num1[0];
+        let b = num1[1];
+        let C = num1[2];
+            if ( b < a && b < c) {
+                document.getElementById("dis2").innerHTML = ("Số nguyên dương nhỏ nhất là: " + b)
+                } else if ( c < a) {
+                    document.getElementById("dis2").innerHTML = ("Số nguyên dương nhỏ nhất là: " + c)
+                } else {
+                    document.getElementById("dis2").innerHTML = ("Số nguyên dương nhỏ nhất là: " + a)
+                }            
+            }
+    so_nguyen_duong()
+
+    let num_am = []
+    for ( let i = 0 ; i < 100 ; i ++) {
+        num_am[i] = Math.floor(Math.random() * (-100));
+        if (num_am[i] == 0) {
+            num_am.splice(i,i,"-101")
+        }
+    }
+    document.getElementById("dis3").innerHTML = num_am
+    function so_nguyen_am () {
+        let num2 = num_am.slice(0,3)
+        let d = num2[0];
+        let e = num2[1];
+        let f = num2[2];
+        document.getElementById("dis4").innerHTML = "3 số nguyên âm nhỏ nhất là: " + num2
+        if ( a < d && a < f) {
+                document.getElementById("dis5").innerHTML = ("Số nguyên âm nhỏ nhất là: " + e)
+                } else if ( c < a) {
+                    document.getElementById("dis5").innerHTML = ("Số nguyên âm nhỏ nhất là: " + f)
+                } else {
+                    document.getElementById("dis5").innerHTML = ("Số nguyên âm nhỏ nhất là: " + d)
+                }     
+        }
+    so_nguyen_am()
+</script> 
+</html> 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function tinh_tong(a, b) {
+        //     if(a > b){
+        //         alert("Tham số thứ nhất lớn hơn tham số thứ hai");
+        //     }
+        //     else{
+        //         return a + b;
+        //     }
+        // }
+        // var a = parseInt(prompt("Nhập số a"));
+        // var a = parseInt(prompt("Nhập số b"));
+        // var tong = tinh_tong(a, b);
+        // if(a > b){
+        //     document.write("Không nhận giá trị");
+        // }
+        // else{
+        //     document.write("Tổng hai số " + a + " + " + b + " là " + tong);
+        // } 
+
+        function bai1() {
+            let num1 = +prompt("Nhập vào số thứ nhất: ");
+            let num2 = +prompt("Nhập vào số thứ hai: ");
+            if (num1 > num2) {
+                alert("Số thứ nhất lớn hơn số thứ hai");
+            } else {
+                let sum = num1 + num2;
+                alert("Tổng hai số của bạn vừa nhập là: " + sum);
+            }
+        }    
+
+    </script>
+   
+</body>
+</html>
