@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //từ khóa class: đánh dấu đây là 1 class được khởi tạo trong Js - tạo lớp Rectangle
+    class Rectangle {
+        //các thuộc tính trong class Rectangle
+        height
+        width
+        color
+        //hàm hoặc phương thức khởi tạo đối tượng của class Rectangle
+        //từ khóa constructor: đánh dấu phương thức khởi tạo
+        constructor(height, width) {
+            this.height = height
+            this.width = width
+            this.color = color
+        }
+        //các phương thức trong class Rectangle - phương thức getArea(), getPerimeter(), display()
+        //tinh dien tich
+        getArea()
+        {
+        return this.height * this.width;
+        }
+ 
+        //tinh chu vi
+        getPerimeter()
+        {
+        return ((this.height + this.width) * 2);
+        }
+        display()
+        {
+        return "Rectangle{" . "length=" . this.height . ", width=" . this.width . "}";
+        }
+        setColor(color) {
+            this.color = color
+        }
+    }
+
+    //khởi tạo đối tượng thuộc lớp Rectangle
+    let Rectangle1 = new Rectangle(10, 5)
+    // let Rectangle2 = new Rectangle(20, 10)
+    console.log(Rectangle1.getArea());
+    console.log(Rectangle1.getPerimeter());
+    console.log(Rectangle1.display());
+    console.log(Rectangle1.getColor());
+    // console.log(Rectangle2.getArea());
+    // console.log(Rectangle2.getPerimeter());
+    // console.log(Rectangle2.display());
+    // console.log(Rectangle2.getColor());
+    Rectangle1.setColor("blue")
+    // Rectangle2.setColor("pink")
+    console.log(Rectangle1.color);
+    // console.log(Rectangle2.color);
+
+</script>
+</html>
