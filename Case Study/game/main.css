@@ -1,0 +1,62 @@
+.body {
+    box-sizing: border-box;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+}
+
+.body__title {
+    text-align: center;
+}
+
+.body__score {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 130px;
+    background-color: rgb(238, 238, 238);
+    top: 200px;
+    left: 200px;
+    border: 1px solid #333;
+    font-size: 26px;
+    border-radius: 5px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.score__heading {
+    margin: 15px 0;
+}
+
+#startGame {
+    position: absolute;
+    top: 300px;
+    left: 250px;
+    background-color: rgba(204, 204, 204, 0.9);
+}
+
+.btn {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: rgba(131, 131, 131, 0.4);
+    font-size: 18px;
+    font-family: 'Dancing Script', cursive;
+    color: #333333;
+    min-width: 100px;
+}
+
+.btn:hover {
+    background-color: #d3d3d3;
+    box-shadow: 0 8px 8px rgba(131, 131, 131, 0.6);
+}
+
+#myCanvas {
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #333;
+}

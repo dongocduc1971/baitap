@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Dancing+Script:wght@600&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+    <div class="body">
+        <h1 class="body__title">Flappy Bird</h1>
+        <canvas id="myCanvas" class="myCanvas" width="320" height="520"></canvas>
+        <br>
+        <div id="body__score" class="body__score">
+            <p class="score__heading">Score: <span id="score__title" class="score__title"></span></p>
+            <button id="restart" class="btn" type="reset" onclick="restart()">Restart</button>
+        </div>
+        <button id="startGame" class="btn" onclick="startGame()">Start</button>
+    </div>
+    <img id="bird" style="display: none" src="./images/bird.png" alt="">
+    <img id="ground" style="display: none" src="images/ground.png" alt="">
+    <img id="pipeNorth" style="display: none" src="./images/pipeNorth.png" alt="">
+    <img id="pipeSouth" style="display: none" src="./images/pipeSouth.png" alt="">
+    
+    <audio id="music">
+        <source src="sounds/bg-music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="pipeNorth.js"></script>
+    <script src="pipeSouth.js"></script>
+    <script src="classBird.js"></script>
+    <script src="classGround.js"></script>
+    <script src="main.js"></script>    
+</body>
+</html>
