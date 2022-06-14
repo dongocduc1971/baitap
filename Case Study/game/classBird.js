@@ -1,4 +1,4 @@
-class Bird {
+class Ong {
     x;
     y;
     width;
@@ -12,7 +12,7 @@ class Bird {
     }
 
     drawBird() {
-        ctx.drawImage(document.getElementById("bird"), this.x, this.y, this.width, this.height);
+        ctx.drawImage(document.getElementById("ong"), this.x, this.y, this.width, this.height);
 
     }
 
