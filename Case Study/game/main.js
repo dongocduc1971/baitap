@@ -5,15 +5,15 @@ let cvs = document.getElementById("myCanvas");
 	let spacePipe;
 	let highScore = 0;
 	sessionStorage.setItem('high_score0', highScore);
-	let ong = new Ong(40, 120);
+	let bird = new Bird(40, 120);
 	let ground = new Ground();
 	let pipeNorths = [new PipeNorth(cvs.width + 50, Math.floor(Math.random() * (-100 + 300) - 300))];
 	let pipeSouths = [new PipeSouth(cvs.width + 50, pipeNorths[0].y + pipeNorths[0].height + gap)];
 	
 	function start() {
 	    clearCanvas();
-	    ong.drawBird();
-	    ong.moveDown();
+	    bird.drawBird();
+	    bird.moveDown();
 	    window.addEventListener("keydown", moveBird);
 	    window.addEventListener('keydown', musicPlay);
 	
@@ -57,9 +57,9 @@ let cvs = document.getElementById("myCanvas");
 	}
 	
 	function checkContact(i) {
-	    if (ong.y <= 0 || ong.y + ong.height >= ground.y ||
-	        ong.x + ong.width - 3 >= pipeNorths[i].x && ong.x <= pipeNorths[i].x + pipeNorths[i].width - 3 && ong.y - 3 <= pipeNorths[i].y + pipeNorths[i].height ||
-	        ong.x + ong.width - 3 >= pipeSouths[i].x && ong.x <= pipeSouths[i].x + pipeSouths[i].width - 3 && ong.y + ong.height - 3 >= pipeSouths[i].y) {
+	    if (bird.y <= 0 || bird.y + bird.height >= ground.y ||
+	        bird.x + bird.width - 3 >= pipeNorths[i].x && bird.x <= pipeNorths[i].x + pipeNorths[i].width - 3 && bird.y - 3 <= pipeNorths[i].y + pipeNorths[i].height ||
+	        bird.x + bird.width - 3 >= pipeSouths[i].x && bird.x <= pipeSouths[i].x + pipeSouths[i].width - 3 && bird.y + bird.height - 3 >= pipeSouths[i].y) {
 	        stopGame();
 	        window.removeEventListener('keydown', moveBird);
 	        window.removeEventListener('keydown', musicPlay);
